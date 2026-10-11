@@ -7,12 +7,12 @@ compatibility_date = "2025-01-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "aj-predict"
-database_id = "PUT-YOUR-D1-DATABASE-ID-HERE"
+database_id = "a03e6f36-12e6-45b4-b23a-d9f63fb250c3"
 
 # KV  (id را از داشبورد: Storage & Databases ← KV ← CACHE بردار)
 [[kv_namespaces]]
 binding = "CACHE"
-id = "PUT-YOUR-KV-NAMESPACE-ID-HERE"
+id = "9036c2bc758f4ca285790bfd808a4d6d"
 
 # تسویه خودکار نتایج و دوئل‌ها، هر ۲ دقیقه
 [triggers]
