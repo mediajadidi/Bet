@@ -1,0 +1,31 @@
+# اسم باید دقیقاً همان Worker فعلی باشد (آدرس: bet.ualireza82.workers.dev)
+name = "bet"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+
+# دیتابیس D1  (database_id را از داشبورد: Storage & Databases ← D1 ← aj-predict بردار)
+[[d1_databases]]
+binding = "DB"
+database_name = "aj-predict"
+database_id = "PUT-YOUR-D1-DATABASE-ID-HERE"
+
+# KV  (id را از داشبورد: Storage & Databases ← KV ← CACHE بردار)
+[[kv_namespaces]]
+binding = "CACHE"
+id = "PUT-YOUR-KV-NAMESPACE-ID-HERE"
+
+# تسویه خودکار نتایج و دوئل‌ها، هر ۲ دقیقه
+[triggers]
+crons = ["*/2 * * * *"]
+
+[observability]
+enabled = true
+
+# متغیرهای معمولی (Text). بعد از Deploy مقدارهای داشبورد با این‌ها جایگزین می‌شوند.
+[vars]
+TZ = "Asia/Tehran"
+TZ_OFFSET = "+03:30"
+ADMIN_EMAILS = "shahriyarjadidi@gmail.com"
+
+# Secretها را اینجا ننویس؛ همان‌هایی که در داشبورد زده‌ای می‌مانند:
+#   API_KEY   و   SUPABASE_JWT_SECRET
