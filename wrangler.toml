@@ -1,6 +1,6 @@
 # اسم باید دقیقاً همان Worker فعلی باشد (آدرس: bet.ualireza82.workers.dev)
 name = "bet"
-main = "src/worker.js"
+main = "worker.js"
 compatibility_date = "2025-01-01"
 
 # دیتابیس D1  (database_id را از داشبورد: Storage & Databases ← D1 ← aj-predict بردار)
@@ -29,3 +29,4 @@ ADMIN_EMAILS = "shahriyarjadidi@gmail.com"
 
 # Secretها را اینجا ننویس؛ همان‌هایی که در داشبورد زده‌ای می‌مانند:
 #   API_KEY   و   SUPABASE_JWT_SECRET
+
